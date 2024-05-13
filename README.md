@@ -30,7 +30,7 @@ Install rubberstamp on each affected repository.
 
 ## Prerequisites
 
-* An auxiliary SSH keypair
+* Auxiliary SSH keypair generated with [ssh-keygen](https://linux.die.net/man/1/ssh-keygen)
 * Public key registered with GitHub owner account
 * Private key registered as an `SSH_KEY` GitHub Actions Repository Secret
 
