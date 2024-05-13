@@ -1,0 +1,19 @@
+---
+name: "Rubberstamp"
+on: # yamllint disable-line rule:truthy
+  push:
+  pull_request:
+  schedule:
+  - cron: "0 0 * */1 *"
+jobs:
+  Audit:
+    runs-on: "ubuntu-22.04"
+    steps:
+    - uses: "actions/checkout@v4"
+    - run: "sudo apt-get update"
+    - run: "sudo apt-get install -y git"
+    - run: "date -u >.rubberstamp"
+    - run: "git commit -am 'rubberstamp'"
+    - run: "echo \"$SSH_KEY\" >/tmp/key && git -c 'core.sshCommand=ssh -i /tmp/key' push"
+      env:
+        SSH_KEY: "${{ secrets.SSH_KEY }}"
