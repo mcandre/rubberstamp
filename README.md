@@ -4,7 +4,11 @@
 
 ## Problem
 
-In a shortsighted attempt to cut costs, GitHub disables recurring GitHub Actions for FOSS projects after a period of inactivity. Including important security scans. Even though new CVE's are discovered retroactively, *particularly* for old, stale projects.
+In a shortsighted attempt to cut costs, GitHub disables recurring GitHub Actions for FOSS projects after a period of inactivity. Including important security scans. Which is backwards, because software vulnerabilities accrue most rapidly on old, stale projects. Every component downstream ends up inheriting the vulnerabilities.
+
+This results in a default *insecure* state for the vast majority of GitHub repositories, including public FOSS and private projects.
+
+Dependabot is not a complete answer, because Dependabot reports often omit vulnerabilities indicated by other SCA systems.
 
 ## Solution
 
