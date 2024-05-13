@@ -18,8 +18,6 @@ But it gets worse. As a project naturally ages, the number of commits reduces ov
 
 We implement a new GitHub Action to rubberstamp a repository with nonce commits. In order to restore the accuracy of `cron` schedules for all of the repository's actions.
 
-See [.github/workflows/rubberstamp.yml](.github/workflows/rubberstamp.yml).
-
 # LICENSE
 
 BSD-2-Clause
