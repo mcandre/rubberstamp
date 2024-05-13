@@ -8,7 +8,7 @@ In a weaksauce attempt to cut costs, GitHub Actions stops triggering `cron` sche
 
 Why does this matter?
 
-Like other security tools, Dependabot and CodeQL have gaps, which are filled in by configuring GitHub Actions to run additional security tools. Hence the need for (GitHub Actions) CI/CD.
+Like other security tools, Dependabot and CodeQL have gaps, which are filled in by configuring GitHub Actions to run additional security scanning tools. Think, `npm audit`, etc. Hence the need for (GitHub Actions) CI/CD.
 
 Triggering actions on commit events has gaps, in terms of timing. Attackers don't wait for new commits to take advantage of the latest vulnerabilities. Consider a project where most workers leave for the weekend. The last commit is on Thursday. After work on Friday, researchers announce a new vulnerability that impacts the project. But no new commits arrive, so no new scans are run.
 
