@@ -19,7 +19,8 @@ BSD-2-Clause
 # REQUIREMENTS
 
 * GitHub Actions
-* an SSH private key registered as a GitHub Secret
+* SSH public key registered with repository owner or org admin
+* SSH private key registered as a GitHub Secret
 
 GitHub is doubly nasty, refusing to implement per-org secrets for personal orgs. Many users will have to configure the secret per-repository, creating yet more maintenance nightmares. Good luck!
 
