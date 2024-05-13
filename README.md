@@ -4,19 +4,19 @@
 
 ## Problem
 
-In a weaksauce attempt to cut costs, GitHub Actions stops triggering `cron` scheduled actions after a period of inactivity. This breaks important, recurring security scans.
+In a weaksauce attempt to cut costs, GitHub Actions stops triggering `cron` scheduled actions after a period of inactivity. With deleterious security implications.
 
-Software vulnerabilities accrue most rapidly on exactly the kinds of old, stale projects that receive few recent commits. And every component downstream ends up inheriting these vulnerabilities. Commit-based triggers are insufficient for identifying vulnerabilities in a timely manner. Hence the need for recurring scans.
+Why does this matter?
 
-Dependabot is insufficient, because like every other SCA tool, Dependabot's CVE report often has mutually exclusive gaps compared with the other tools. We need (recurring) GitHub Actions, to in order to responsibly layer on additional SCA security scans.
+Like other security tools, Dependabot and CodeQL have gaps, which are filled in by configuring GitHub Actions to run additional security tools. Hence the need for (GitHub Actions) CI/CD.
 
-CodeQL has a similar story to Dependabot for linting / SAST. Except CodeQL isn't even enabled by default. We need recurring GitHub Actions, to in order to responsibly layer on additional SAST security scans.
+Triggering actions on commit events has gaps, in terms of timing. Attackers don't wait for new commits to take advantage of the latest vulnerabilities. Consider a project where most workers leave for the weekend. The last commit is on Thursday. After work on Friday, researchers announce a new vulnerability that impacts the project. But no new commits arrive, so no new scans are run.
 
-All of this contributes to a default *insecure* state for the vast majority of GitHub repositories, including public FOSS and private projects.
+But it gets worse. As a project naturally ages, the number of commits reduces over time. But the likelihood of vulnerabilities increases with time. When the project is most in need of security scanning, commit-based triggers no longer fire. Hence the need for recurring CI/CD.
 
 ## Solution
 
-We declare a new recurring GitHub Action to rubberstamp the project with a nonce commit every so often. The action modifies a `.rubberstamp` text file.
+We implement a new GitHub Action to rubberstamp a repository with nonce commits. In order to restore the accuracy of `cron` schedules for all of the repository's actions.
 
 See [.github/workflows/rubberstamp.yml](.github/workflows/rubberstamp.yml).
 
@@ -26,9 +26,7 @@ BSD-2-Clause
 
 # USAGE
 
-Once the rubberstamp action is installed on a GitHub repository, GitHub Actions can automatically resume processing all `cron` triggered actions on that repository.
-
-For best effect, install rubberstamp on each affected repository.
+Install rubberstamp on each affected repository.
 
 # INSTALL
 
