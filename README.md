@@ -22,19 +22,13 @@ See [.github/workflows/rubberstamp.yml](.github/workflows/rubberstamp.yml).
 
 BSD-2-Clause
 
-# INSTALL
+# SETUP
 
 1. Register SSH public key with the relevant GitHub repository owner or GitHub org admin account.
 2. Register SSH private key as a GitHub Actions Secret for each GitHub repository.
-3. Run `cp rubberstamp/.github/workflows/rubberstamp.yml <some-repository>/.github/workflows/rubberstamp.yml`
-4. Temporarily configure `cron` interval to `*/15 * * * *` (every 15 minutes), in order to verify successful installation.
+3. Copy [.github/workflows/rubberstamp.yml](.github/workflows/rubberstamp.yml) to your GitHub Actions workflows directory.
+4. Temporarily configure `cron` interval to `*/15 * * * *` (every 15 minutes), in order to verify successful installation. Stage, commit, and push the new action.
 5. Reset `cron` to a longer interval, but fast enough to beat the silly GitHub Actions shutoff.
-
-# UNINSTALL
-
-```console
-$ rm <some-repository>/.github/workflows/rubberstamp.yml
-```
 
 # CONTRIBUTING
 
