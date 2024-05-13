@@ -12,7 +12,7 @@ Like other security tools, Dependabot and CodeQL have gaps, which are filled in 
 
 Triggering actions on commit events has gaps, in terms of timing. Attackers don't wait for new commits to take advantage of the latest vulnerabilities. Consider a project where most workers leave for the weekend. The last commit is on Thursday. After work on Friday, researchers announce a new vulnerability that impacts the project. But no new commits arrive, so no new scans are run.
 
-But it gets worse. As a project naturally ages, the number of commits reduces over time. But the likelihood of vulnerabilities increases with time. When the project is most in need of security scanning, commit-based triggers no longer fire. Hence the need for recurring CI/CD, until the project is eventually archived.
+But it gets worse. As a project naturally ages, the number of commits reduces over time. But the likelihood of vulnerabilities increases with time. When the project is most in need of security scanning, commit triggers no longer fire. Hence the need for recurring CI/CD, until the project is eventually archived.
 
 ## Solution
 
@@ -42,7 +42,7 @@ Temporarily configure the `cron` interval to `*/15 * * * *` (every 15 minutes).
 
 Warning: Validate `cron` schedule syntax for accuracy, such as with [crontab.guru](https://crontab.guru/). Misconfigured schedules may fail to parse; run too infrequently; or run too frequently, risking rate limits.
 
-Warning: Avoid enabling commit based triggers for the rubberstamp action other than `cron`. Commit based triggers may create a nasty feedback loop, risking rate limits.
+Warning: Avoid enabling commit triggers for the rubberstamp action other than `cron`. Commit triggers may create a nasty feedback loop, risking rate limits.
 
 # UNINSTALL
 
