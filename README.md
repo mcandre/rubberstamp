@@ -30,18 +30,21 @@ Install rubberstamp on each affected repository.
 
 # INSTALL
 
-1. Use `ssh-keygen` to create an auxiliary SSH keypair for the rubberstamp GitHub Action to authenticate to GitHub.
-2. Register auxiliary public key with a GitHub owner account.
-3. Register auxiliary private key as a GitHub Actions Repository Secret.
-4. Copy the [rubberstamp.yml](.github/workflows/rubberstamp.yml) action configuration file to `.github/workflows`.
-5. Temporarily configure `cron` interval to `*/15 * * * *` (every 15 minutes), pushing the altered configuration to the remote. This assists with verifying successful installation.
-6. Reset `cron` to a longer interval, one that is still fast enough to beat the GitHub Actions shutoff interval. Push the reset configuration to the remote.
+## Prerequisites
+
+* An auxiliary SSH keypair
+* Public key registered with GitHub owner account
+* Private key registered as an `SSH_KEY` GitHub Actions Repository Secret
+
+Copy [rubberstamp.yml](.github/workflows/rubberstamp.yml) to `.github/workflows/`.
+
+## Test
+
+Temporarily configure the `cron` interval to `*/15 * * * *` (every 15 minutes).
 
 # UNINSTALL
 
-1. Remove `.github/workflows/rubberstamp.yml` from git version control.
-2. Remove auxiliary private key from GitHub Actions Repository Secrets.
-3. Remove auxiliary public key from GitHub owner account.
+Remove `.github/workflows/rubberstamp.yml` from git version control.
 
 # CONTRIBUTING
 
