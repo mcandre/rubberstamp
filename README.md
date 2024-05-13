@@ -42,6 +42,10 @@ Copy [rubberstamp.yml](.github/workflows/rubberstamp.yml) to `.github/workflows/
 
 Temporarily configure the `cron` interval to `*/15 * * * *` (every 15 minutes).
 
+Warning: Validate `cron` schedule syntax for accuracy, such as with [crontab.guru](https://crontab.guru/). Misconfigured schedules may fail to parse; run too infrequently; or run too frequently, risking rate limits.
+
+Warning: Avoid enabling commit based triggers for the rubberstamp action other than `cron`. Commit based triggers may create a nasty feedback loop, risking rate limits.
+
 # UNINSTALL
 
 Remove `.github/workflows/rubberstamp.yml` from git version control.
