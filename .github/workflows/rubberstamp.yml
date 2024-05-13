@@ -17,6 +17,6 @@ jobs:
     - run: "git config --global user.email 'rubberstamp@rubberstamp.test'"
     - run: "git config --global user.name 'Rubberstamp'"
     - run: "git commit -am 'rubberstamp'"
-    - run: "echo \"$SSH_KEY\" >/tmp/key && git -c 'core.sshCommand=ssh -i /tmp/key' push"
+    - run: "echo \"$SSH_KEY\" >/tmp/key && chmod 0600 /tmp/key && git -c 'core.sshCommand=ssh -i /tmp/key' push"
       env:
         SSH_KEY: "${{ secrets.SSH_KEY }}"
