@@ -13,9 +13,9 @@ jobs:
     - run: "sudo apt-get update"
     - run: "sudo apt-get install -y git"
     - run: "date -u >.rubberstamp"
-    - run: "git remote set-url origin \"git@github.com:${GITHUB_ACTION_REPOSITORY}.git\""
+    - run: "git remote set-url origin \"git@github.com:${RUBBERSTAMP_GH_REPO}.git\""
       env:
-        GITHUB_ACTION_REPOSITORY: "${{ github.action_repository }}"
+        RUBBERSTAMP_GH_REPO: "${{ github.repository }}"
     - run: "git remote get-url origin"
     - run: "git config --global user.email 'rubberstamp@rubberstamp.test'"
     - run: "git config --global user.name 'Rubberstamp'"
