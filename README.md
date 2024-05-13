@@ -20,13 +20,17 @@ See [.github/workflows/rubberstamp.yml](.github/workflows/rubberstamp.yml).
 
 BSD-2-Clause
 
-# REQUIREMENTS
+# INSTALL
 
-* GitHub Actions
-* SSH public key registered with repository owner or org admin
-* SSH private key registered as a GitHub Secret
+1. Register SSH public key with the relevant GitHub repository owner or GitHub org admin account.
+2. Register SSH private key secret with each GitHub repository.
+3. Run `cp rubberstamp/.github/workflows/rubberstamp.yml <some-repository>/.github/workflows/rubberstamp.yml`
 
-GitHub is doubly nasty, refusing to implement per-org secrets for personal orgs. Many users will have to configure the secret per-repository, creating yet more maintenance nightmares. Good luck!
+# UNINSTALL
+
+```console
+$ rm <some-repository>/.github/workflows/rubberstamp.yml
+```
 
 # CONTRIBUTING
 
