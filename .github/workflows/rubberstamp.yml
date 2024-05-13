@@ -2,6 +2,9 @@
 name: "Rubberstamp"
 on: # yamllint disable-line rule:truthy
   schedule:
+  # Once every 15 minutes
+  # - cron: "*/15 * * * *"
+  # Once a month
   - cron: "0 0 * */1 *"
 jobs:
   Audit:
@@ -14,6 +17,7 @@ jobs:
     - run: "git remote set-url origin \"git@github.com:${RUBBERSTAMP_GH_REPO}.git\""
       env:
         RUBBERSTAMP_GH_REPO: "${{ github.repository }}"
+    - run: "git remote get-url origin"
     - run: "git config --global user.email 'rubberstamp@rubberstamp.test'"
     - run: "git config --global user.name 'Rubberstamp'"
     - run: "git commit -am 'rubberstamp'"

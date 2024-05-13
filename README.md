@@ -14,6 +14,8 @@ Dependabot is not a complete answer, because Dependabot reports often omit vulne
 
 We declare a recurring GitHub Action to update a nonce file in version control.
 
+The new action periodically updates a `.rubberstamp` text file with the current timestamp.
+
 See [.github/workflows/rubberstamp.yml](.github/workflows/rubberstamp.yml).
 
 # LICENSE
@@ -25,6 +27,8 @@ BSD-2-Clause
 1. Register SSH public key with the relevant GitHub repository owner or GitHub org admin account.
 2. Register SSH private key as a GitHub Actions Secret for each GitHub repository.
 3. Run `cp rubberstamp/.github/workflows/rubberstamp.yml <some-repository>/.github/workflows/rubberstamp.yml`
+4. Temporarily configure `cron` interval to `*/15 * * * *` (every 15 minutes), in order to verify successful installation.
+5. Reset `cron` to a longer interval, but fast enough to beat the silly GitHub Actions shutoff.
 
 # UNINSTALL
 
