@@ -36,17 +36,24 @@ Install rubberstamp on each affected repository.
 
 Copy [rubberstamp.yml](.github/workflows/rubberstamp.yml) to `.github/workflows/`.
 
-## Test
+# UNINSTALL
 
-Temporarily configure the `cron` interval to `*/15 * * * *` (every 15 minutes).
+Remove `.github/workflows/rubberstamp.yml` from git version control.
+
+# TEST
+
+Temporarily configure the `cron` interval to `*/5 * * * *` (every 5 minutes).
 
 Warning: Validate `cron` schedule syntax for accuracy, such as with [crontab.guru](https://crontab.guru/). Misconfigured schedules may fail to parse; run too infrequently; or run too frequently, risking rate limits.
 
 Warning: Avoid enabling commit triggers for the rubberstamp action other than `cron`. Commit triggers may create a nasty feedback loop, risking rate limits.
 
-# UNINSTALL
+If you accidentally trigger an infinite series of jobs, you can quickly recover by either:
 
-Remove `.github/workflows/rubberstamp.yml` from git version control.
+* Force pushing the action with all the `on` triggers removed, to relevant remote branches.
+* Using the GitHub Web UI to manually disable the job
+
+Note that GitHub Actions does not support multiple `cron` triggers for the same action: It silently selects one of the `cron` schedules as the one and only schedule.
 
 # CONTRIBUTING
 
