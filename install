@@ -8,4 +8,4 @@ go install mvdan.cc/sh/v3/cmd/shfmt@v3.7.0
 go mod tidy
 
 pip3 install --upgrade pip setuptools
-pip3 install -r requirements-dev.txt
+pip3 install -r requirements.txt
