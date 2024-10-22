@@ -19,7 +19,6 @@
 $ ./build audit
 ```
 
-
 # LINT
 
 ```console
