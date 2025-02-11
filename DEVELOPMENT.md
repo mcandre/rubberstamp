@@ -3,7 +3,7 @@
 * GNU or BSD [findutils](https://en.wikipedia.org/wiki/Find_(Unix))
 * POSIX compatible [sh](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/sh.html)
 * [ShellCheck](https://www.shellcheck.net/) 0.8.0+
-* [Go](https://go.dev/) 1.23.2+
+* [Go](https://go.dev/) 1.24.0+
 * [Python](https://www.python.org/) 3.12.1+ with [pipenv](https://pipenv.pypa.io/en/latest/)
 * [Snyk](https://snyk.io/)
 * Provision additional dev tools with `./install`

@@ -1,3 +1,3 @@
-module github.com/mcandre/ji
+module github.com/mcandre/rubberstamp
 
-go 1.23
+go 1.24

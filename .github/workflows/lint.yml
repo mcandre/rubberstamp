@@ -9,12 +9,12 @@ jobs:
     env:
       GOPATH: "/home/runner/go"
     steps:
-    - run: "echo \"/usr/local/go/bin\" >> \"$GITHUB_PATH\""
-    - run: "echo \"${GOPATH}/bin\" >> \"$GITHUB_PATH\""
+    - uses: "actions/setup-go@v5"
+      with:
+        go-version: "1.24.0"
     - uses: "actions/checkout@v4"
-    - run: "sudo apt-get update"
-    - run: "sudo apt-get install -y curl python3-venv shellcheck"
-    - run: "curl -LO https://go.dev/dl/go1.23.2.linux-amd64.tar.gz"
-    - run: "sudo tar -C /usr/local -xzf go1.23.2.linux-amd64.tar.gz"
-    - run: "./install"
-    - run: "./build lint"
+    - run: |
+        sudo apt-get update
+        sudo apt-get install -y curl python3-venv shellcheck
+        ./install
+        ./build lint
