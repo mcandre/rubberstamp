@@ -5,6 +5,9 @@ go 1.24
 tool (
 	github.com/mcandre/slick/cmd/slick
 	github.com/mcandre/stank
+	github.com/mcandre/stank/cmd/funk
+	github.com/mcandre/stank/cmd/stank
+	github.com/mcandre/stank/cmd/stink
 	mvdan.cc/sh/v3/cmd/shfmt
 )
 

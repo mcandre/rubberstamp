@@ -15,6 +15,9 @@ github.com/mcandre/slick/cmd/slick
 # github.com/mcandre/stank v0.0.31
 ## explicit; go 1.23
 github.com/mcandre/stank
+github.com/mcandre/stank/cmd/funk
+github.com/mcandre/stank/cmd/stank
+github.com/mcandre/stank/cmd/stink
 # github.com/rogpeppe/go-internal v1.13.1
 ## explicit; go 1.22
 github.com/rogpeppe/go-internal/diff
