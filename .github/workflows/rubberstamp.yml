@@ -12,6 +12,7 @@ on: # yamllint disable-line rule:truthy
   # - cron: "*/5 * * * *"
   # Once a month
   - cron: "0 0 1 * *"
+  workflow_dispatch:
 jobs:
   Audit:
     runs-on: "ubuntu-24.04"
