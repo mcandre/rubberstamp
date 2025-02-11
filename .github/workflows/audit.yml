@@ -27,4 +27,4 @@ jobs:
         curl -LO https://downloads.snyk.io/cli/stable/snyk-linux
         sudo cp snyk-linux /bin/snyk
         sudo chmod a+x /bin/snyk
-    - run: "./build audit"
+    - run: "make audit"
