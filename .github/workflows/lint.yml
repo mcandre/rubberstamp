@@ -21,7 +21,7 @@ jobs:
       with:
         toolchain: "1.75.0"
     - name: "provision dev tools"
-      run: "make -j 4"
+      run: "make -f install.mk -j 4"
     - name: "install shellcheck"
       run: |
         sudo apt-get update

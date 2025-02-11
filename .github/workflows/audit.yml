@@ -21,7 +21,7 @@ jobs:
       with:
         python-version: "3.12"
     - name: "provision dev tools"
-      run: "make go python"
+      run: "make -f install.mk go python"
     - name: "install snyk"
       run: |
         curl -LO https://downloads.snyk.io/cli/stable/snyk-linux
