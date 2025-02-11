@@ -14,6 +14,7 @@ lint() {
     shellcheck
     shfmt
     slick
+    unmake
 }
 
 bashate() {
@@ -43,6 +44,10 @@ slick() {
 snyk() {
     command snyk test --all-projects --exclude=requirements.txt
     command snyk test --command=.venv/bin/python3
+}
+
+unmake() {
+    command unmake .
 }
 
 if [ "$#" -eq 0 ]; then
