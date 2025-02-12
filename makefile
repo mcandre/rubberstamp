@@ -1,5 +1,5 @@
 .POSIX:
-.SILENT:
+# .SILENT:
 .PHONY: \
 	all \
 	audit \
