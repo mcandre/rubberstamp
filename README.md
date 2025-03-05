@@ -55,8 +55,4 @@ If you accidentally trigger an infinite series of jobs, you can quickly recover 
 
 Note that GitHub Actions does not support multiple `cron` triggers for the same action: It silently selects one of the `cron` schedules as the one and only schedule.
 
-# CONTRIBUTING
-
-For more information on developing rubberstamp itself, see [DEVELOPMENT.md](DEVELOPMENT.md).
-
 🔴
