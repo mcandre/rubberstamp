@@ -1,6 +1,10 @@
 # rubberstamp: GitHub Action to fix GitHub Actions
 
+[![Donate](https://img.shields.io/badge/GUMROAD-36a9ae?style=flat&logo=gumroad&logoColor=white)](https://mcandre.gumroad.com/)
+
 # ABOUT
+
+rubberstamp fixes security and futureproofing issues with GitHub Actions CI/CD pipelines, especially for any projects not guaranteed to see continuous development day over day.
 
 ## Problem
 
