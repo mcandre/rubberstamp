@@ -1,6 +1,6 @@
 # rubberstamp: GitHub Action to fix GitHub Actions
 
-[![Donate](https://img.shields.io/badge/GUMROAD-36a9ae?style=flat&logo=gumroad&logoColor=white)](https://mcandre.gumroad.com/)
+[![license](https://img.shields.io/badge/license-BSD-3)](LICENSE.md) [![Donate](https://img.shields.io/badge/GUMROAD-36a9ae?style=flat&logo=gumroad&logoColor=white)](https://mcandre.gumroad.com/)
 
 # ABOUT
 
@@ -21,10 +21,6 @@ But it gets worse. As a project naturally ages, the number of commits reduces ov
 ## Solution
 
 We implement a new GitHub Action to rubberstamp a repository with nonce commits. In order to restore the accuracy of `cron` schedules for all of the repository's actions.
-
-# LICENSE
-
-BSD-2-Clause
 
 # USAGE
 
