@@ -1,6 +1,6 @@
 # rubberstamp: GitHub Action to fix GitHub Actions
 
-[![Rubberstamp self test](https://github.com/mcandre/rubberstamp/actions/workflows/rubberstamp.yml/badge.svg)](https://github.com/mcandre/rubberstamp/actions/workflows/rubberstamp.yml) [![license](https://img.shields.io/badge/license-BSD-3)](LICENSE.md) [![Donate](https://img.shields.io/badge/GUMROAD-36a9ae?style=flat&logo=gumroad&logoColor=white)](https://mcandre.gumroad.com/)
+[![Rubberstamp self test](https://github.com/mcandre/rubberstamp/actions/workflows/rubberstamp.yml/badge.svg)](https://github.com/mcandre/rubberstamp/actions/workflows/rubberstamp.yml) [![license](https://img.shields.io/badge/license-BSD-3)](LICENSE.md) [![Donate](https://img.shields.io/badge/-any?logo=gumroad&label=Donate&color=grey)](https://mcandre.gumroad.com/)
 
 # ABOUT
 
