@@ -8,7 +8,7 @@ rubberstamp fixes security and futureproofing issues with GitHub Actions CI/CD p
 
 ## Problem
 
-In a weaksauce attempt to cut costs, GitHub Actions stops triggering `cron` scheduled actions after a period of inactivity. With deleterious security implications.
+GitHub Actions stops triggering `cron` scheduled actions after a period of inactivity. With deleterious security implications.
 
 Why does this matter?
 
@@ -26,7 +26,9 @@ We implement a new GitHub Action to rubberstamp a repository with nonce commits.
 
 Install rubberstamp on each affected repository.
 
-# INSTALL
+# DOWNLOAD
+
+Copy [rubberstamp.yml](.github/workflows/rubberstamp.yml) to `.github/workflows/`.
 
 ## Prerequisites
 
@@ -34,9 +36,7 @@ Install rubberstamp on each affected repository.
 * Public key registered with GitHub owner account
 * Private key registered as an `SSH_KEY` GitHub Actions Repository Secret
 
-Copy [rubberstamp.yml](.github/workflows/rubberstamp.yml) to `.github/workflows/`.
-
-# UNINSTALL
+## Uninstall
 
 Remove `.github/workflows/rubberstamp.yml` from git version control.
 
