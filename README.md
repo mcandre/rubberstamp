@@ -1,6 +1,6 @@
 # rubberstamp: GitHub Action to fix GitHub Actions
 
-[![Rubberstamp self test](https://github.com/mcandre/rubberstamp/actions/workflows/rubberstamp.yml/badge.svg)](https://github.com/mcandre/rubberstamp/actions/workflows/rubberstamp.yml) [![license](https://img.shields.io/badge/license-BSD-3)](LICENSE.md)
+[![CI/CD](https://badgen.net/github/checks/mcandre/rubberstamp?icon=github)](https://github.com/mcandre/rubberstamp/actions) [![License](https://badgen.net/static/license/BSD/ab2b29?icon=freebsd)](LICENSE.md)
 
 # ABOUT
 
